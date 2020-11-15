@@ -64,6 +64,8 @@ namespace PrimerosPasos
 
             figura();
             cuadrado();
+            condicion();
+            repeticion();
 
             Console.ReadKey();
         }//fin del main
@@ -123,7 +125,14 @@ namespace PrimerosPasos
         }
         static void repeticion()
         {
-
+            int boleto;
+            Console.WriteLine("Ingrese el numero de boletos que desea : ");
+            boleto = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= boleto; i++)
+            {
+                Console.WriteLine("Boleto Numero {0}",i);
+            }
+            Console.WriteLine("Gracias por elegirnos vuelva pronto :D");
         }
     }
 }
