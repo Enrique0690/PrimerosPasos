@@ -55,12 +55,22 @@ namespace PrimerosPasos
             saludos("Jose Alcivar");
             saludos("Josue Nazareno");
             saludos("Maria Alcivar");
+
+            Console.WriteLine();
+            Console.WriteLine("Llamada a funcion que devuelve valor");
+            Console.WriteLine("Liquido a recibir para Juan{0}", calcularSueldo(300, 200));
+            Console.WriteLine("Liquido a recibir para Carlos{0}", calcularSueldo(300, 200));
+            Console.WriteLine("Liquido a recibir para Lesli{0}", calcularSueldo(300, 200));
+
+            figura();
+            cuadrado();
+
             Console.ReadKey();
-        }
-        //funciones: subprocesos - subprogramas - subrutinas
-        //dividir el codigo en modulos 
-        //reutilizar el codigo
-        //tipo: devuelven valores - no devuelve valores
+        }//fin del main
+         //funciones: subprocesos - subprogramas - subrutinas
+         //dividir el codigo en modulos 
+         //reutilizar el codigo
+         //tipo: devuelven valores - no devuelve valores
 
         static void saludos(string nombre) //parametro - 
         {
@@ -68,5 +78,52 @@ namespace PrimerosPasos
             Console.WriteLine("Funcion que no devuelve valores...");
             Console.WriteLine("Hola {0}", nombre);
         }
+        //funcion que devuelve valor
+        //la funcion devuelve un tipo de dato
 
+        static int calcularSueldo(int ingreso, int egreso)
+        {
+
+            return (ingreso - egreso);
+        }
+        //crear la funcion que imprima la siguiente figura
+        //    *
+        //   *
+        //  ***
+        // ***
+        static void figura()
+        {
+            Console.WriteLine("   *  ");
+            Console.WriteLine("  *** ");
+            Console.WriteLine(" ***** ");
+            Console.WriteLine("******* ");
+
+        }
+        static void cuadrado()
+        {
+            int valor;
+            Console.WriteLine("Escrbia un numero : ");
+            valor = int.Parse(Console.ReadLine());
+            Console.WriteLine("El cuadrado de {0} es {1}", valor, valor*valor);
+        }
+        static void condicion()
+        {
+            int edad;
+            Console.WriteLine("Ingrese su edad");
+            edad = int.Parse(Console.ReadLine());
+            if (edad >= 0)
+            {
+                if (edad > 17)
+                    Console.WriteLine("Usted es mayor de edad");
+                else
+                    Console.WriteLine("Usted es menor de edad");
+            }
+            else
+                Console.WriteLine("Edad no valida");
+        }
+        static void repeticion()
+        {
+
+        }
     }
+}
